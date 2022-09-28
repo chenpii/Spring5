@@ -19,4 +19,12 @@ public class Book {
     public void setBauthor(String bauthor) {
         this.bauthor = bauthor;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bname='" + bname + '\'' +
+                ", bauthor='" + bauthor + '\'' +
+                '}';
+    }
 }

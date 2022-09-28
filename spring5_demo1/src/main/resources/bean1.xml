@@ -13,6 +13,12 @@
             value：向属性注入的值
         -->
         <property name="bname" value="易筋经"/>
-        <property name="bauthor" value="达摩"/>
+        <property name="bauthor" value="达摩老祖"/>
+    </bean>
+
+    <!--3 有参构造注入-->
+    <bean id="orders" class="com.atguigu.spring5.Orders">
+        <constructor-arg name="oname" value="电脑"/>
+        <constructor-arg name="address" value="China"/>
     </bean>
 </beans>
