@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--1 配置User对象创建-->
+    <bean id="user" class="com.atguigu.spring5.User"/>
+
+    <!--2 set方法注入属性-->
+    <bean id="book" class="com.atguigu.spring5.Book">
+        <!-- 使用proptertiy完成属性注入
+            name：类里面属性名称
+            value：向属性注入的值
+        -->
+        <property name="bname" value="易筋经"/>
+        <property name="bauthor" value="达摩"/>
+    </bean>
+</beans>
