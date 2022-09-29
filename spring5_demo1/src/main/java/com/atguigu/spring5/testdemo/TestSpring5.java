@@ -7,6 +7,10 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * @author chenpi
  * @create 2022-09-28 22:03
@@ -39,6 +43,18 @@ public class TestSpring5 {
         Orders order = context.getBean("orders", Orders.class);
 
         System.out.println(order);
+
+    }
+
+    @Test
+    public void testDate() throws ParseException {
+        String dateValueAPI="2022-09-29 11:36:18";
+        String dateValyeDB="2022-09-29 11:36:18.0";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        Date dateAPI = sdf.parse(dateValueAPI);
+        Date dateDB = sdf.parse(dateValyeDB);
+
+        System.out.println(dateAPI.compareTo(dateDB));
 
     }
 }
