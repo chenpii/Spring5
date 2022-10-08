@@ -8,6 +8,7 @@
           <file>file://$MODULE_DIR$/src/main/resources/bean1.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/bean2.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/bean3.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/bean4.xml</file>
         </fileset>
       </configuration>
     </facet>
