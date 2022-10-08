@@ -1,7 +1,7 @@
-package com.atguigu.spring5.testdemo;
+package com.chenp.spring5.testdemo;
 
-import com.atguigu.spring5.bean.Emp;
-import com.atguigu.spring5.service.UserService;
+import com.chenp.spring5.bean.Emp;
+import com.chenp.spring5.service.UserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

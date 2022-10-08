@@ -6,14 +6,14 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--1 service 和 dao 对象创建-->
-    <bean id="userService" class="com.atguigu.spring5.service.UserService">
+    <bean id="userService" class="com.chenp.spring5.service.UserService">
         <!--注入userDao对象
             name属性:类里属性名称
             ref属性：创建userDao对象bean标签的值
         -->
         <property name="userDao" ref="userDao"/>
     </bean>
-    <bean id="userDao" class="com.atguigu.spring5.dao.UserDaoImpl"/>
+    <bean id="userDao" class="com.chenp.spring5.dao.UserDaoImpl"/>
 
 
 </beans>

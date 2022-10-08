@@ -1,8 +1,8 @@
-package com.atguigu.spring5.testdemo;
+package com.chenp.spring5.testdemo;
 
-import com.atguigu.spring5.Book;
-import com.atguigu.spring5.Orders;
-import com.atguigu.spring5.User;
+import com.chenp.spring5.Book;
+import com.chenp.spring5.Orders;
+import com.chenp.spring5.User;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

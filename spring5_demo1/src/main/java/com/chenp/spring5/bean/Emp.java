@@ -1,4 +1,4 @@
-package com.atguigu.spring5.bean;
+package com.chenp.spring5.bean;
 
 /**
  * 员工类

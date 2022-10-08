@@ -1,4 +1,4 @@
-package com.atguigu.spring5.dao;
+package com.chenp.spring5.dao;
 
 public class UserDaoImpl implements UserDao {
     @Override

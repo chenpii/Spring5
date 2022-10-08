@@ -1,4 +1,4 @@
-package com.atguigu.spring5;
+package com.chenp.spring5;
 
 /**
  * 演示使用set方法进行注入属性

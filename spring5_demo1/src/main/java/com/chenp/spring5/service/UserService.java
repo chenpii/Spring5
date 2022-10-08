@@ -1,6 +1,6 @@
-package com.atguigu.spring5.service;
+package com.chenp.spring5.service;
 
-import com.atguigu.spring5.dao.UserDao;
+import com.chenp.spring5.dao.UserDao;
 
 public class UserService {
     //创建userdao属性及其set方法
