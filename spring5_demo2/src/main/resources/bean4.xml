@@ -11,4 +11,6 @@
         <property name="oname" value="手机"/>
     </bean>
 
+    <!--  配置后置处理器 -->
+    <bean id="myBeanPost" class="com.chenp.spring5.bean.MyBeanPost"/>
 </beans>

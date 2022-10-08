@@ -1,10 +1,10 @@
 package com.chenp.spring5.testdemo;
 
+import com.chenp.spring5.autowire.Emp;
 import com.chenp.spring5.bean.Orders;
 import com.chenp.spring5.collectiontype.Book;
 import com.chenp.spring5.collectiontype.Course;
 import com.chenp.spring5.collectiontype.Stu;
-import com.chenp.spring5.factorybean.MyBean;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -43,5 +43,12 @@ public class TestSpring5Demo2 {
 
         //手动销毁bean
         ((ClassPathXmlApplicationContext)context).close();
+    }
+    @Test
+    public void test5(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean5.xml");
+        Emp emp = context.getBean("emp", Emp.class);
+        System.out.println(emp);
+
     }
 }
