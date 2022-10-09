@@ -3,7 +3,10 @@ package com.chenp.spring5.service;
 import com.chenp.spring5.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @author chenpi
@@ -16,13 +19,18 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     //定义dao类型属性
-//不需要添加set方法
-//添加注入属性注解
-    @Autowired//根据类型进行注入
-    @Qualifier("userDaoImpl2")//根据名称进行注入
+    //不需要添加set方法
+    //添加注入属性注解
+    // @Autowired//根据类型进行注入
+    // @Qualifier("userDaoImpl2")//根据名称进行注入
+    // private UserDao userDao;
+
+    // @Resource//根据类型注入
+    @Resource(name = "userDaoImpl2") //根据名称注入
     private UserDao userDao;
 
     public void add() {
+        System.out.println("service add ........");
         userDao.add();
     }
 }
