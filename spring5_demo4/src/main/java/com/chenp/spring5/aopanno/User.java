@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class User {
     public void add() {
+        // int i = 10 / 0;//异常
         System.out.println("add.....");
     }
 }
