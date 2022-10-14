@@ -7,6 +7,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -59,5 +60,18 @@ public class TestBook {
         for (Book book : books) {
             System.out.println(book);
         }
+    }
+
+    @Test
+    public void testBatchAdd() {
+        BookService bookService = xmlContext.getBean("bookService", BookService.class);
+        List<Object[]> batchArgs = new ArrayList<>();
+        Object[] o1 = {6,"Jenkins","0"};
+        Object[] o2 = {7,"SpringCloud","1"};
+        Object[] o3 = {8,"Mariadb","1"};
+        batchArgs.add(o1);
+        batchArgs.add(o2);
+        batchArgs.add(o3);
+        System.out.println(bookService.batchAdd(batchArgs));
     }
 }

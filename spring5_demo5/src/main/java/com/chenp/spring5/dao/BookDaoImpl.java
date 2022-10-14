@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -75,5 +76,10 @@ public class BookDaoImpl implements BookDao {
         return bookList;
     }
 
-
+    @Override
+    public int[] batchAdd(List<Object[]> batchArgs) {
+        String sql = "insert into t_book values(?,?,?)";
+        int[] ints = jdbcTemplate.batchUpdate(sql, batchArgs);
+        return ints;
+    }
 }

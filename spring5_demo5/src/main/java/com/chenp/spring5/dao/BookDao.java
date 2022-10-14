@@ -26,4 +26,7 @@ public interface BookDao {
 
     //查询图书分页
     List<Book> queryBookList();
+
+    //批量添加
+    int[] batchAdd(List<Object[]> batchArgs);
 }

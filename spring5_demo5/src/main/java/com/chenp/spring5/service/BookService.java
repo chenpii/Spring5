@@ -47,5 +47,9 @@ public class BookService {
         return bookDao.queryBookList();
     }
 
+    //批量添加
+    public int[] batchAdd(List<Object[]> batchArgs) {
+        return bookDao.batchAdd(batchArgs);
+    }
 
 }
