@@ -5,6 +5,8 @@ import com.chenp.spring5.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author chenpi
  * @create 2022-10-13 22:00
@@ -15,9 +17,35 @@ public class BookService {
     @Autowired
     private BookDao bookDao;
 
-
     //添加的方法
     public void addBook(Book book) {
         bookDao.add(book);
     }
+
+    //修改的方法
+    public void updateBook(Book book) {
+        bookDao.update(book);
+    }
+
+    //删除的方法
+    public void deleteBook(Integer bookID) {
+        bookDao.delete(bookID);
+    }
+
+    //查询条数
+    public Integer queryCount() {
+        return bookDao.queryCount();
+    }
+
+    //查询单个图书
+    public Book queryBookByID(Integer bookId) {
+        return bookDao.queryBookByID(bookId);
+    }
+
+    //查询图书列表
+    public List<Book> queryBookList() {
+        return bookDao.queryBookList();
+    }
+
+
 }
