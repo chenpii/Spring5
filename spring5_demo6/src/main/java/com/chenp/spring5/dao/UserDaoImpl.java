@@ -23,7 +23,7 @@ public class UserDaoImpl implements UserDao {
      * @param toName
      */
     @Override
-    @Transactional(propagation = Propagation.REQUIRED)
+    //@Transactional(propagation = Propagation.REQUIRED)
     public void addMoney(Integer money, String toName) {
         String sql = "update t_account set money=money+? where username=?";
         jdbcTemplate.update(sql, money, toName);
@@ -36,7 +36,7 @@ public class UserDaoImpl implements UserDao {
      * @param fromName
      */
     @Override
-    @Transactional(propagation = Propagation.REQUIRED)
+    //@Transactional(propagation = Propagation.REQUIRED)
     public void reduceMoney(Integer money, String fromName) {
         String sql = "update t_account set money=money-? where username=?";
         jdbcTemplate.update(sql, money, fromName);

@@ -24,8 +24,7 @@ public class UserService {
      * @param toName   收款人
      */
     //2、声明式事务
-    @Transactional(isolation = Isolation.REPEATABLE_READ,
-            timeout = -1)
+    @Transactional(isolation = Isolation.REPEATABLE_READ)
     public void transMoney(Integer money, String fromName, String toName) {
 
         //1、编程式事务
@@ -47,9 +46,10 @@ public class UserService {
         //
         // }
 
-        userDao.reduceMoney(money, fromName);
-        int i = 10 / 0;
         userDao.addMoney(money, toName);
+        int i = 10 / 0;
+        userDao.reduceMoney(money, fromName);
+
 
     }
 
