@@ -29,4 +29,10 @@ public interface BookDao {
 
     //批量添加
     int[] batchAdd(List<Object[]> batchArgs);
+
+    //批量添加
+    int[] batchUpdate(List<Object[]> batchArgs);
+
+    //批量删除
+    int[] batchDelete(List<Object[]> batchArgs);
 }

@@ -66,12 +66,38 @@ public class TestBook {
     public void testBatchAdd() {
         BookService bookService = xmlContext.getBean("bookService", BookService.class);
         List<Object[]> batchArgs = new ArrayList<>();
-        Object[] o1 = {6,"Jenkins","0"};
-        Object[] o2 = {7,"SpringCloud","1"};
-        Object[] o3 = {8,"Mariadb","1"};
+        Object[] o1 = {6, "Jenkins", "0"};
+        Object[] o2 = {7, "SpringCloud", "1"};
+        Object[] o3 = {8, "Mariadb", "1"};
         batchArgs.add(o1);
         batchArgs.add(o2);
         batchArgs.add(o3);
-        System.out.println(bookService.batchAdd(batchArgs));
+        System.out.println(Arrays.toString(bookService.batchAdd(batchArgs)));
+    }
+
+    @Test
+    public void testBatchUpdate() {
+        BookService bookService = xmlContext.getBean("bookService", BookService.class);
+        List<Object[]> batchArgs = new ArrayList<>();
+        Object[] o1 = {"Jenkins", "0", 6};
+        Object[] o2 = {"SpringCloud", "0", 7};
+        Object[] o3 = {"Mariadb", "0", 8};
+        batchArgs.add(o1);
+        batchArgs.add(o2);
+        batchArgs.add(o3);
+        System.out.println(Arrays.toString(bookService.batchUpdate(batchArgs)));
+    }
+
+    @Test
+    public void testBatchDelete() {
+        BookService bookService = xmlContext.getBean("bookService", BookService.class);
+        List<Object[]> batchArgs = new ArrayList<>();
+        Object[] o1 = {6};
+        Object[] o2 = {7};
+        Object[] o3 = {8};
+        batchArgs.add(o1);
+        batchArgs.add(o2);
+        batchArgs.add(o3);
+        System.out.println(Arrays.toString(bookService.batchDelete(batchArgs)));
     }
 }

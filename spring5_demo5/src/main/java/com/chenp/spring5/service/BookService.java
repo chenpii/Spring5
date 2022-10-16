@@ -52,4 +52,14 @@ public class BookService {
         return bookDao.batchAdd(batchArgs);
     }
 
+    //批量修改
+    public int[] batchUpdate(List<Object[]> batchArgs) {
+        return bookDao.batchUpdate(batchArgs);
+    }
+
+    //批量删除
+    public int[] batchDelete(List<Object[]> batchArgs) {
+        return bookDao.batchDelete(batchArgs);
+    }
+
 }
