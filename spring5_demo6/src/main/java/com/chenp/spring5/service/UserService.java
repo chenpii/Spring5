@@ -2,6 +2,7 @@ package com.chenp.spring5.service;
 
 import com.chenp.spring5.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
@@ -47,7 +48,7 @@ public class UserService {
         // }
 
         userDao.addMoney(money, toName);
-        int i = 10 / 0;
+        // int i = 10 / 0;
         userDao.reduceMoney(money, fromName);
 
 
