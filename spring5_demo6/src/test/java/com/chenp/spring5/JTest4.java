@@ -2,6 +2,7 @@ package com.chenp.spring5;
 
 import com.chenp.spring5.service.UserService;
 
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class JTest4 {
     private UserService userService;
 
     @Test
-    public void test1(){
-        userService.transMoney(100,"lucy","mary");
+    public void test1() {
+        userService.transMoney(100, "lucy", "mary");
     }
 }
